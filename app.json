@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ododo",
-    "slug": "ododo",
+    "name": "Darwin",
+    "slug": "darwin",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./src/assets/images/icon.png",

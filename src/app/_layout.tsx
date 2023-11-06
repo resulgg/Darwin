@@ -11,6 +11,8 @@ import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
 
+import Providers from "../components/Providers";
+
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -55,8 +57,10 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+    <Providers>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      </Stack>
+    </Providers>
   );
 }
