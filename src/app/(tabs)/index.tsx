@@ -4,6 +4,7 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Tab Changed</Text>
+      <Text>Test Edildi.</Text>
       <View style={styles.separator} />
     </View>
   );
