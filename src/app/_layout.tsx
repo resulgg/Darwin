@@ -10,8 +10,9 @@ import {
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 import { useEffect } from "react";
-
+import { StatusBar } from "react-native";
 import Providers from "../components/Providers";
+import { useTheme } from "react-native-paper";
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -56,10 +57,19 @@ export default function RootLayout() {
 }
 
 function RootLayoutNav() {
+  const color = useTheme();
   return (
     <Providers>
-      <Stack>
+      <Stack
+        initialRouteName="(auth)"
+        screenOptions={{
+          headerTintColor: "black",
+          headerStyle: { backgroundColor: color.colors.background },
+          headerTitleStyle: { color: color.colors.onSurface, fontFamily: "Inter_600SemiBold" },
+        }}>
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="cam" options={{ headerShown: false }} />
       </Stack>
     </Providers>
   );
